@@ -1,5 +1,6 @@
 package nl.han.aim.asd.calculator;
 
+import nl.han.aim.asd.expression.Expression;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -37,13 +38,34 @@ public class Main {
         System.out.println("Input: " + expressionString);
 
         // TODO 4.3 1a -- Maak AST-classes in de expression package.
-//        System.out.println("AST: " + reader.getTopExpression());
+        System.out.println("AST: " + reader.getTopExpression());
 
         // TODO 4.3 2 -- Implementeer een Evaluator klasse met een
         //  methode double eval(Expression ast) die de sommen uitrekent.
         // Evalueer de expressie
-//        System.out.println("Evaluatie: " + expressionString + " = "
-//                + new Evaluator().evaluate(reader.getTopExpression()));
+        System.out.println("Evaluatie: " + expressionString + " = "
+                + new Evaluator().evaluate(reader.getTopExpression()));
 
+//        Expression tree4 = new Expression();
+//        tree4.setContent("6");
+//        tree4.setLeft(null);
+//        tree4.setRight(null);
+//
+//        Expression tree2 = new Expression();
+//        tree2.setContent("5");
+//        tree2.setLeft(tree4);
+//        tree2.setRight(null);
+//
+//        Expression tree3 = new Expression();
+//        tree3.setContent("3");
+//        tree3.setLeft(null);
+//        tree3.setRight(null);
+//
+//        Expression tree = new Expression();
+//        tree.setContent("2");
+//        tree.setLeft(tree2);
+//        tree.setRight(tree3);
+//
+//        System.out.println(tree);
     }
 }
